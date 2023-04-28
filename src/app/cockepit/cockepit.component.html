@@ -2,16 +2,20 @@
 <div class="col-sm-12">
     <p> Add new Servers or blueprints ! </p>
     <label for="">Server Name</label>
-    <input type="text" class="form-control" [(ngModel)]="newServerName" >
+    <!-- using two databinding -->
+    <!-- <input type="text" class="form-control"  [(ngModel)]="newServerName" > -->
+
+    <!-- using local ref variable -->
+    <input type="text" class="form-control" #newServerInput >
     <label for=""> Server Content</label>
     <input type="text" class="form-control"  [(ngModel)]="newServerContent">
     <br>
      <div class="col-sm">
       <button class="btn btn-primary m-1 "
-    (click)="onAddServer()"> Add Server </button>
+    (click)="onAddServer(newServerInput)"> Add Server </button>
 
     <button class="btn btn-primary m-1 "
-    (click)="onAddBluePrint()"> Add Server BluePrint </button>
+    (click)="onAddBluePrint(newServerInput)"> Add Server BluePrint </button>
      </div>
 
  </div>

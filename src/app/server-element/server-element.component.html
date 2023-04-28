@@ -1,10 +1,10 @@
-<div class="card m-1 p-2 text-white" [ngClass]="{'bg-primary': element.type ==='server','bg-success': element.type ==='blueprint'}" >
-<div class="card-heading" >{{element.name}}</div>
+<div class="card m-1 p-2" [ngClass]="{'border border-primary': element.type ==='server','border border-success': element.type ==='blueprint'}" >
+  <div class="card-header ">{{element.name}}</div>
+
   <div class="card-body p-2" >
 
-       <!-- <strong  *ngIf="element.type ==='server'" class="bg-primary"  >{{element.content}}<strong>
-       <em *ngIf="element.type === 'blueprint'" class="bg-success">{{element.content}}</em> -->
-       <p class="card-text" > {{element.content}}</p>
+    <ng-content></ng-content>
+       <!-- <p class="card-text" > {{element.content}}</p> -->
 
   </div>
 </div>

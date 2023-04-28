@@ -7,6 +7,9 @@
       <app-server-element
       *ngFor="let serverElement of serverElements"
        [srvElement]="serverElement">
+
+       <p class="card-text" > {{serverElement.content}}</p>
+
        </app-server-element>
     </div>
   </div>

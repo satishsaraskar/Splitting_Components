@@ -7,7 +7,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class CockepitComponent {
   @Output()serverCreated = new EventEmitter<{ serverName : string , serverContent:string }>();
-  // alias custom Event parent to chlid 
+  // alias custom Event parent to chlid
   @Output('bpCreated')
     blueprintCreated = new EventEmitter<{ serverName : string , serverContent:string }>();
   public newServerName : string = "";
@@ -17,11 +17,17 @@ export class CockepitComponent {
   ngOnInit() {
   }
 
-  onAddServer (){
-    this.serverCreated.emit({serverName :this.newServerName , serverContent:this.newServerContent})
+  onAddServer (newServerInputData:HTMLInputElement){
+    // console.log(newServerInputData.value);
+    this.serverCreated.emit(
+      { serverName :newServerInputData.value ,
+        serverContent:this.newServerContent
+      })
   }
-  onAddBluePrint (){
-    this.blueprintCreated.emit({serverName :this.newServerName , serverContent:this.newServerContent})
+  onAddBluePrint (newServerInputData:HTMLInputElement){
+    this.blueprintCreated.emit(
+      {serverName :newServerInputData.value ,
+         serverContent:this.newServerContent})
 
   }
 }
