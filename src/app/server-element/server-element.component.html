@@ -1,9 +1,10 @@
-<div class="card" >
-<div class="card-heading">{{element.name}}</div>
-  <div class="card-body p-2">
-    <p class="card-text">
-       <strong *ngIf="element.type ==='server'" class="bg-primary"  >{{element.content}}</strong>
-       <em *ngIf="element.type === 'blueprint'" class="bg-success">{{element.content}}</em>
-    </p>
+<div class="card m-1 p-2 text-white" [ngClass]="{'bg-primary': element.type ==='server','bg-success': element.type ==='blueprint'}" >
+<div class="card-heading" >{{element.name}}</div>
+  <div class="card-body p-2" >
+
+       <!-- <strong  *ngIf="element.type ==='server'" class="bg-primary"  >{{element.content}}<strong>
+       <em *ngIf="element.type === 'blueprint'" class="bg-success">{{element.content}}</em> -->
+       <p class="card-text" > {{element.content}}</p>
+
   </div>
 </div>

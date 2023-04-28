@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
  public serverElements  = [
-    {type:'server', name :'One' , content:'just a test one!'},
-    {type:'blueprint', name :'two' , content:'just a test two !'},
+    {type:'server', name :'Sql server' , content:'a database that is isolated from other databases and from the instance of SQL Server that hosts the database'},
+    {type:'blueprint', name :'mongodb server' , content:'MongoDB stores data records as BSON documents'},
   ] ;
 
   title = 'splitting-app-components';

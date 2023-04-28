@@ -1,14 +1,13 @@
 <div class="container">
-  <h2>dsd</h2>
   <app-cockepit (serverCreated)="onServerAdded($event)"
                 (bpCreated)="onBlueprintAdded($event)"> </app-cockepit>
   <hr />
   <div class="row">
-    <div class="col-sm-12">
-      <h1>hh</h1>
+    <div class="col-md-6">
       <app-server-element
       *ngFor="let serverElement of serverElements"
-       [srvElement]="serverElement"> </app-server-element>
+       [srvElement]="serverElement">
+       </app-server-element>
     </div>
   </div>
 </div>
